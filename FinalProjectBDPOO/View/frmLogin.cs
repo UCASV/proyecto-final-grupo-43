@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProjectBDPOO.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace FinalProjectBDPOO
             InitializeComponent();
         }
 
+        private void btnSesion_Click(object sender, EventArgs e)
+        {
+            frmMenuprincipal ventana = new frmMenuprincipal();
+            ventana.ShowDialog();
+        }
     }
 }
