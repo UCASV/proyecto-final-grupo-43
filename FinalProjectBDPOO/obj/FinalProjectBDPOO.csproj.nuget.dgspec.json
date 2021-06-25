@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MS12454\\Desktop\\ProjectBDPOO\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj": {}
+    "C:\\Users\\ferna\\OneDrive\\Escritorio\\proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MS12454\\Desktop\\ProjectBDPOO\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj": {
+    "C:\\Users\\ferna\\OneDrive\\Escritorio\\proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MS12454\\Desktop\\ProjectBDPOO\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
+        "projectUniqueName": "C:\\Users\\ferna\\OneDrive\\Escritorio\\proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
         "projectName": "FinalProjectBDPOO",
-        "projectPath": "C:\\Users\\MS12454\\Desktop\\ProjectBDPOO\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
-        "packagesPath": "C:\\Users\\MS12454\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MS12454\\Desktop\\ProjectBDPOO\\FinalProjectBDPOO\\obj\\",
+        "projectPath": "C:\\Users\\ferna\\OneDrive\\Escritorio\\proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
+        "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ferna\\OneDrive\\Escritorio\\proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\MS12454\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ferna\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
