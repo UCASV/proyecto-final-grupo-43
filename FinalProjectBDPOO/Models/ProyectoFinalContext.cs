@@ -131,6 +131,11 @@ namespace FinalProjectBDPOO.Models
 
                 entity.Property(e => e.Prioridad).HasColumnName("prioridad");
 
+                entity.Property(e => e.Telefono)
+                    .HasMaxLength(9)
+                    .IsUnicode(false)
+                    .HasColumnName("telefono");
+
                 entity.HasOne(d => d.IdInstitucionNavigation)
                     .WithMany(p => p.Ciudadanos)
                     .HasForeignKey(d => d.IdInstitucion)

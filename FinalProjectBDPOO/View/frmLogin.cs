@@ -45,6 +45,7 @@ namespace FinalProjectBDPOO
                             //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
                             this.Hide();
+                            ventana.WindowState = FormWindowState.Maximized;
                             ventana.StartPosition = FormStartPosition.CenterScreen;
                             ventana.Show();
                         }
