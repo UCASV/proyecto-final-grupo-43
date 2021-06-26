@@ -31,10 +31,8 @@ namespace FinalProjectBDPOO.View
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProceso));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
             this.lblinstitucion = new System.Windows.Forms.Label();
-            this.txtInstitucion = new System.Windows.Forms.TextBox();
+            this.txtEnfermedad = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblcorreo = new System.Windows.Forms.Label();
             this.lbldireccion = new System.Windows.Forms.Label();
@@ -45,10 +43,14 @@ namespace FinalProjectBDPOO.View
             this.lblEdad = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtDUI = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblDui = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDUI = new System.Windows.Forms.TextBox();
+            this.lblintitucion = new System.Windows.Forms.Label();
+            this.cmbIntitucion = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,10 +61,8 @@ namespace FinalProjectBDPOO.View
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.73016F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
-            this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.btnCrear, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.lblinstitucion, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.txtInstitucion, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.txtEnfermedad, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.txtCorreo, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.lblcorreo, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.lbldireccion, 0, 5);
@@ -73,75 +73,55 @@ namespace FinalProjectBDPOO.View
             this.tableLayoutPanel1.Controls.Add(this.lblEdad, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtName, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblName, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txtDUI, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblDui, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.btnCrear, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtDUI, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblintitucion, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.cmbIntitucion, 1, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.70748F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.29252F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.RowCount = 11;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.15385F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.84615F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(436, 517);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegresar.BackColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(3, 436);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(124, 23);
-            this.btnRegresar.TabIndex = 16;
-            this.btnRegresar.Text = "Menu Principal";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrear.Location = new System.Drawing.Point(318, 436);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(115, 23);
-            this.btnCrear.TabIndex = 15;
-            this.btnCrear.Text = "Crear  Cita";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // lblinstitucion
             // 
             this.lblinstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblinstitucion.AutoSize = true;
             this.lblinstitucion.ForeColor = System.Drawing.Color.White;
-            this.lblinstitucion.Location = new System.Drawing.Point(3, 364);
+            this.lblinstitucion.Location = new System.Drawing.Point(3, 328);
             this.lblinstitucion.Name = "lblinstitucion";
             this.lblinstitucion.Size = new System.Drawing.Size(124, 15);
             this.lblinstitucion.TabIndex = 7;
-            this.lblinstitucion.Text = "Institucion";
+            this.lblinstitucion.Text = "Enfermedades";
             this.lblinstitucion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtInstitucion
+            // txtEnfermedad
             // 
-            this.txtInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtInstitucion.Location = new System.Drawing.Point(133, 361);
-            this.txtInstitucion.Name = "txtInstitucion";
-            this.txtInstitucion.Size = new System.Drawing.Size(179, 22);
-            this.txtInstitucion.TabIndex = 14;
+            this.txtEnfermedad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEnfermedad.Location = new System.Drawing.Point(133, 324);
+            this.txtEnfermedad.Name = "txtEnfermedad";
+            this.txtEnfermedad.Size = new System.Drawing.Size(179, 22);
+            this.txtEnfermedad.TabIndex = 14;
             // 
             // txtCorreo
             // 
             this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCorreo.Location = new System.Drawing.Point(133, 320);
+            this.txtCorreo.Location = new System.Drawing.Point(133, 284);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(179, 22);
             this.txtCorreo.TabIndex = 13;
@@ -151,7 +131,7 @@ namespace FinalProjectBDPOO.View
             this.lblcorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblcorreo.AutoSize = true;
             this.lblcorreo.ForeColor = System.Drawing.Color.White;
-            this.lblcorreo.Location = new System.Drawing.Point(3, 324);
+            this.lblcorreo.Location = new System.Drawing.Point(3, 287);
             this.lblcorreo.Name = "lblcorreo";
             this.lblcorreo.Size = new System.Drawing.Size(124, 15);
             this.lblcorreo.TabIndex = 5;
@@ -163,7 +143,7 @@ namespace FinalProjectBDPOO.View
             this.lbldireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbldireccion.AutoSize = true;
             this.lbldireccion.ForeColor = System.Drawing.Color.White;
-            this.lbldireccion.Location = new System.Drawing.Point(3, 281);
+            this.lbldireccion.Location = new System.Drawing.Point(3, 251);
             this.lbldireccion.Name = "lbldireccion";
             this.lbldireccion.Size = new System.Drawing.Size(124, 15);
             this.lbldireccion.TabIndex = 4;
@@ -173,7 +153,7 @@ namespace FinalProjectBDPOO.View
             // txtDireccion
             // 
             this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccion.Location = new System.Drawing.Point(133, 278);
+            this.txtDireccion.Location = new System.Drawing.Point(133, 248);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(179, 22);
             this.txtDireccion.TabIndex = 12;
@@ -181,7 +161,7 @@ namespace FinalProjectBDPOO.View
             // txtTelefono
             // 
             this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.Location = new System.Drawing.Point(133, 238);
+            this.txtTelefono.Location = new System.Drawing.Point(133, 213);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(179, 22);
             this.txtTelefono.TabIndex = 11;
@@ -191,7 +171,7 @@ namespace FinalProjectBDPOO.View
             this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(3, 241);
+            this.lblTelefono.Location = new System.Drawing.Point(3, 216);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(124, 15);
             this.lblTelefono.TabIndex = 6;
@@ -201,7 +181,7 @@ namespace FinalProjectBDPOO.View
             // txtEdad
             // 
             this.txtEdad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEdad.Location = new System.Drawing.Point(133, 199);
+            this.txtEdad.Location = new System.Drawing.Point(133, 174);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(179, 22);
             this.txtEdad.TabIndex = 10;
@@ -211,7 +191,7 @@ namespace FinalProjectBDPOO.View
             this.lblEdad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEdad.AutoSize = true;
             this.lblEdad.ForeColor = System.Drawing.Color.White;
-            this.lblEdad.Location = new System.Drawing.Point(3, 202);
+            this.lblEdad.Location = new System.Drawing.Point(3, 177);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(124, 15);
             this.lblEdad.TabIndex = 2;
@@ -221,7 +201,7 @@ namespace FinalProjectBDPOO.View
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.Location = new System.Drawing.Point(133, 158);
+            this.txtName.Location = new System.Drawing.Point(133, 136);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(179, 22);
             this.txtName.TabIndex = 9;
@@ -231,37 +211,19 @@ namespace FinalProjectBDPOO.View
             this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblName.AutoSize = true;
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(3, 161);
+            this.lblName.Location = new System.Drawing.Point(3, 139);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(124, 15);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nombre completo";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtDUI
-            // 
-            this.txtDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDUI.Location = new System.Drawing.Point(133, 113);
-            this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(179, 22);
-            this.txtDUI.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(318, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 15);
-            this.label1.TabIndex = 3;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // lblDui
             // 
             this.lblDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
             this.lblDui.ForeColor = System.Drawing.Color.White;
-            this.lblDui.Location = new System.Drawing.Point(3, 116);
+            this.lblDui.Location = new System.Drawing.Point(3, 100);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(124, 15);
             this.lblDui.TabIndex = 1;
@@ -275,12 +237,76 @@ namespace FinalProjectBDPOO.View
             this.tableLayoutPanel1.SetColumnSpan(this.label2, 3);
             this.label2.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 41);
+            this.label2.Location = new System.Drawing.Point(3, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(430, 18);
             this.label2.TabIndex = 17;
             this.label2.Text = "PROCESO DE CITAS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegresar.BackColor = System.Drawing.Color.White;
+            this.btnRegresar.Location = new System.Drawing.Point(3, 429);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(124, 23);
+            this.btnRegresar.TabIndex = 16;
+            this.btnRegresar.Text = "Menu Principal";
+            this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.Location = new System.Drawing.Point(318, 429);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(115, 23);
+            this.btnCrear.TabIndex = 15;
+            this.btnCrear.Text = "Crear  Cita";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(318, 100);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 15);
+            this.label1.TabIndex = 3;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtDUI
+            // 
+            this.txtDUI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDUI.Location = new System.Drawing.Point(133, 96);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(179, 22);
+            this.txtDUI.TabIndex = 8;
+            // 
+            // lblintitucion
+            // 
+            this.lblintitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblintitucion.AutoSize = true;
+            this.lblintitucion.ForeColor = System.Drawing.Color.White;
+            this.lblintitucion.Location = new System.Drawing.Point(3, 370);
+            this.lblintitucion.Name = "lblintitucion";
+            this.lblintitucion.Size = new System.Drawing.Size(124, 15);
+            this.lblintitucion.TabIndex = 18;
+            this.lblintitucion.Text = "Institucion";
+            this.lblintitucion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbIntitucion
+            // 
+            this.cmbIntitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbIntitucion.FormattingEnabled = true;
+            this.cmbIntitucion.Location = new System.Drawing.Point(133, 366);
+            this.cmbIntitucion.Name = "cmbIntitucion";
+            this.cmbIntitucion.Size = new System.Drawing.Size(179, 23);
+            this.cmbIntitucion.TabIndex = 19;
             // 
             // FrmProceso
             // 
@@ -295,6 +321,7 @@ namespace FinalProjectBDPOO.View
             this.MinimizeBox = false;
             this.Name = "FrmProceso";
             this.Text = "Proceso Cita";
+            this.Load += new System.EventHandler(this.FrmProceso_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -318,9 +345,11 @@ namespace FinalProjectBDPOO.View
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.TextBox txtInstitucion;
+        private System.Windows.Forms.TextBox txtEnfermedad;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblintitucion;
+        private System.Windows.Forms.ComboBox cmbIntitucion;
     }
 }
