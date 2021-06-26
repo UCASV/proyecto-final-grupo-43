@@ -29,6 +29,7 @@ namespace FinalProjectBDPOO.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmrVacuna));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -83,10 +84,10 @@ namespace FinalProjectBDPOO.View
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 2);
             this.label1.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(3, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(421, 18);
@@ -97,7 +98,7 @@ namespace FinalProjectBDPOO.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(173, 58);
+            this.label3.Location = new System.Drawing.Point(172, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 10);
             this.label3.TabIndex = 2;
@@ -106,10 +107,10 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblIdentificador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIdentificador.AutoSize = true;
-            this.lblIdentificador.ForeColor = System.Drawing.Color.White;
+            this.lblIdentificador.ForeColor = System.Drawing.Color.Black;
             this.lblIdentificador.Location = new System.Drawing.Point(3, 178);
             this.lblIdentificador.Name = "lblIdentificador";
-            this.lblIdentificador.Size = new System.Drawing.Size(164, 15);
+            this.lblIdentificador.Size = new System.Drawing.Size(163, 15);
             this.lblIdentificador.TabIndex = 3;
             this.lblIdentificador.Text = "Identificador de Vacunador:";
             this.lblIdentificador.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -118,10 +119,10 @@ namespace FinalProjectBDPOO.View
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 15);
+            this.label4.Size = new System.Drawing.Size(163, 15);
             this.label4.TabIndex = 4;
             this.label4.Text = "Hora de inicio:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,10 +131,10 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblHoraVacuna.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHoraVacuna.AutoSize = true;
-            this.lblHoraVacuna.ForeColor = System.Drawing.Color.White;
+            this.lblHoraVacuna.ForeColor = System.Drawing.Color.Black;
             this.lblHoraVacuna.Location = new System.Drawing.Point(3, 222);
             this.lblHoraVacuna.Name = "lblHoraVacuna";
-            this.lblHoraVacuna.Size = new System.Drawing.Size(164, 15);
+            this.lblHoraVacuna.Size = new System.Drawing.Size(163, 15);
             this.lblHoraVacuna.TabIndex = 5;
             this.lblHoraVacuna.Text = "Hora de Vacunacion:";
             this.lblHoraVacuna.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -142,10 +143,10 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblEfecto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEfecto.AutoSize = true;
-            this.lblEfecto.ForeColor = System.Drawing.Color.White;
+            this.lblEfecto.ForeColor = System.Drawing.Color.Black;
             this.lblEfecto.Location = new System.Drawing.Point(3, 266);
             this.lblEfecto.Name = "lblEfecto";
-            this.lblEfecto.Size = new System.Drawing.Size(164, 15);
+            this.lblEfecto.Size = new System.Drawing.Size(163, 15);
             this.lblEfecto.TabIndex = 6;
             this.lblEfecto.Text = "Efectos Secundarios:";
             this.lblEfecto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,36 +155,36 @@ namespace FinalProjectBDPOO.View
             // 
             this.cmbCita.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbCita.FormattingEnabled = true;
-            this.cmbCita.Location = new System.Drawing.Point(173, 82);
+            this.cmbCita.Location = new System.Drawing.Point(172, 82);
             this.cmbCita.Name = "cmbCita";
-            this.cmbCita.Size = new System.Drawing.Size(251, 23);
+            this.cmbCita.Size = new System.Drawing.Size(252, 23);
             this.cmbCita.TabIndex = 7;
             // 
             // cmbidentificador
             // 
             this.cmbidentificador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbidentificador.FormattingEnabled = true;
-            this.cmbidentificador.Location = new System.Drawing.Point(173, 218);
+            this.cmbidentificador.Location = new System.Drawing.Point(172, 218);
             this.cmbidentificador.Name = "cmbidentificador";
-            this.cmbidentificador.Size = new System.Drawing.Size(251, 23);
+            this.cmbidentificador.Size = new System.Drawing.Size(252, 23);
             this.cmbidentificador.TabIndex = 8;
             // 
             // txtHoraInicio
             // 
             this.txtHoraInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHoraInicio.Location = new System.Drawing.Point(173, 131);
+            this.txtHoraInicio.Location = new System.Drawing.Point(172, 131);
             this.txtHoraInicio.Name = "txtHoraInicio";
-            this.txtHoraInicio.Size = new System.Drawing.Size(251, 22);
+            this.txtHoraInicio.Size = new System.Drawing.Size(252, 22);
             this.txtHoraInicio.TabIndex = 9;
             // 
             // lblCita
             // 
             this.lblCita.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCita.AutoSize = true;
-            this.lblCita.ForeColor = System.Drawing.Color.White;
+            this.lblCita.ForeColor = System.Drawing.Color.Black;
             this.lblCita.Location = new System.Drawing.Point(3, 86);
             this.lblCita.Name = "lblCita";
-            this.lblCita.Size = new System.Drawing.Size(164, 15);
+            this.lblCita.Size = new System.Drawing.Size(163, 15);
             this.lblCita.TabIndex = 1;
             this.lblCita.Text = "Cita:";
             this.lblCita.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,22 +192,22 @@ namespace FinalProjectBDPOO.View
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(173, 174);
+            this.textBox1.Location = new System.Drawing.Point(172, 174);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 22);
+            this.textBox1.Size = new System.Drawing.Size(252, 22);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(173, 262);
+            this.textBox2.Location = new System.Drawing.Point(172, 262);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 22);
+            this.textBox2.Size = new System.Drawing.Size(252, 22);
             this.textBox2.TabIndex = 11;
             // 
             // btnSiguienteDosis
             // 
-            this.btnSiguienteDosis.Location = new System.Drawing.Point(173, 328);
+            this.btnSiguienteDosis.Location = new System.Drawing.Point(172, 328);
             this.btnSiguienteDosis.Name = "btnSiguienteDosis";
             this.btnSiguienteDosis.Size = new System.Drawing.Size(107, 23);
             this.btnSiguienteDosis.TabIndex = 12;
@@ -217,10 +218,11 @@ namespace FinalProjectBDPOO.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(432, 410);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "fmrVacuna";

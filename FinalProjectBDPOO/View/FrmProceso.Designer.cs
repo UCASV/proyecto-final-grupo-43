@@ -102,7 +102,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblinstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblinstitucion.AutoSize = true;
-            this.lblinstitucion.ForeColor = System.Drawing.Color.White;
+            this.lblinstitucion.ForeColor = System.Drawing.Color.Black;
             this.lblinstitucion.Location = new System.Drawing.Point(3, 328);
             this.lblinstitucion.Name = "lblinstitucion";
             this.lblinstitucion.Size = new System.Drawing.Size(124, 15);
@@ -130,7 +130,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblcorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblcorreo.AutoSize = true;
-            this.lblcorreo.ForeColor = System.Drawing.Color.White;
+            this.lblcorreo.ForeColor = System.Drawing.Color.Black;
             this.lblcorreo.Location = new System.Drawing.Point(3, 287);
             this.lblcorreo.Name = "lblcorreo";
             this.lblcorreo.Size = new System.Drawing.Size(124, 15);
@@ -142,7 +142,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lbldireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbldireccion.AutoSize = true;
-            this.lbldireccion.ForeColor = System.Drawing.Color.White;
+            this.lbldireccion.ForeColor = System.Drawing.Color.Black;
             this.lbldireccion.Location = new System.Drawing.Point(3, 251);
             this.lbldireccion.Name = "lbldireccion";
             this.lbldireccion.Size = new System.Drawing.Size(124, 15);
@@ -170,7 +170,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.ForeColor = System.Drawing.Color.White;
+            this.lblTelefono.ForeColor = System.Drawing.Color.Black;
             this.lblTelefono.Location = new System.Drawing.Point(3, 216);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(124, 15);
@@ -190,7 +190,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblEdad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEdad.AutoSize = true;
-            this.lblEdad.ForeColor = System.Drawing.Color.White;
+            this.lblEdad.ForeColor = System.Drawing.Color.Black;
             this.lblEdad.Location = new System.Drawing.Point(3, 177);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(124, 15);
@@ -210,7 +210,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblName.AutoSize = true;
-            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.ForeColor = System.Drawing.Color.Black;
             this.lblName.Location = new System.Drawing.Point(3, 139);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(124, 15);
@@ -222,7 +222,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDui.AutoSize = true;
-            this.lblDui.ForeColor = System.Drawing.Color.White;
+            this.lblDui.ForeColor = System.Drawing.Color.Black;
             this.lblDui.Location = new System.Drawing.Point(3, 100);
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(124, 15);
@@ -236,7 +236,7 @@ namespace FinalProjectBDPOO.View
             this.label2.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.label2, 3);
             this.label2.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(3, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(430, 18);
@@ -291,7 +291,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.lblintitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblintitucion.AutoSize = true;
-            this.lblintitucion.ForeColor = System.Drawing.Color.White;
+            this.lblintitucion.ForeColor = System.Drawing.Color.Black;
             this.lblintitucion.Location = new System.Drawing.Point(3, 370);
             this.lblintitucion.Name = "lblintitucion";
             this.lblintitucion.Size = new System.Drawing.Size(124, 15);
@@ -312,7 +312,7 @@ namespace FinalProjectBDPOO.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(432, 521);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
