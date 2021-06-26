@@ -5768,11 +5768,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fcortez.REDSERFINSA\\Desktop\\POO C#\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
+      "projectUniqueName": "C:\\Users\\fcortez.REDSERFINSA\\Desktop\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
       "projectName": "FinalProjectBDPOO",
-      "projectPath": "C:\\Users\\fcortez.REDSERFINSA\\Desktop\\POO C#\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
+      "projectPath": "C:\\Users\\fcortez.REDSERFINSA\\Desktop\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
       "packagesPath": "C:\\Users\\fcortez.REDSERFINSA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fcortez.REDSERFINSA\\Desktop\\POO C#\\proyecto-final-grupo-43\\FinalProjectBDPOO\\obj\\",
+      "outputPath": "C:\\Users\\fcortez.REDSERFINSA\\Desktop\\proyecto-final-grupo-43\\FinalProjectBDPOO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
