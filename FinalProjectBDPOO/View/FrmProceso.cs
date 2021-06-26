@@ -28,6 +28,9 @@ namespace FinalProjectBDPOO.View
             using (var db = new ProyectoFinalContext())
             {
 
+             
+
+
                 var ciudadano = new Ciudadano
                 {
                     Dui = txtDUI.Text,
@@ -35,12 +38,27 @@ namespace FinalProjectBDPOO.View
                     Edad = Int32.Parse(txtEdad.Text),
                     Direccion = txtDireccion.Text,
                     CorreoElectronico = txtCorreo.Text,
-                    
+                    EnfermedadCronica = txtEnfermedad.Text,
+                    Telefono = txtTelefono.Text,
+                    IdInstitucion = Int32.Parse(cmbIntitucion.SelectedValue.ToString())
                 };
 
                 db.Ciudadanos.Add(ciudadano);
                 db.SaveChanges();
 
+            }
+        }
+
+        private void FrmProceso_Load(object sender, EventArgs e)
+        {
+
+            using (var db = new ProyectoFinalContext())
+            {
+                List<Institucion> institucions = db.Institucions.ToList();
+
+                cmbIntitucion.DataSource = institucions ;
+                cmbIntitucion.DisplayMember = "Institucion1";
+                cmbIntitucion.ValueMember = "IdInstitucion";
             }
         }
     }

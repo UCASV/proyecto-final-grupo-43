@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace FinalProjectBDPOO.Models
 {
-    public partial class ProyectoFinalContext : DbContext
+    public partial class ProyectoFialContext : DbContext
     {
-        public ProyectoFinalContext()
+        public ProyectoFialContext()
         {
         }
 
-        public ProyectoFinalContext(DbContextOptions<ProyectoFinalContext> options)
+        public ProyectoFialContext(DbContextOptions<ProyectoFialContext> options)
             : base(options)
         {
         }
@@ -46,7 +46,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<Cabina>(entity =>
             {
                 entity.HasKey(e => e.IdCabina)
-                    .HasName("PK__CABINA__FAD33CFDCA720F9F");
+                    .HasName("PK__CABINA__FAD33CFDBB523B0E");
 
                 entity.ToTable("CABINA");
 
@@ -73,7 +73,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<Cabinaxciudadano>(entity =>
             {
                 entity.HasKey(e => e.IdCabinaXciudadano)
-                    .HasName("PK__CABINAXC__BA17E723DFC0AE14");
+                    .HasName("PK__CABINAXC__BA17E72387DB009B");
 
                 entity.ToTable("CABINAXCIUDADANO");
 
@@ -129,8 +129,6 @@ namespace FinalProjectBDPOO.Models
                     .IsUnicode(false)
                     .HasColumnName("nombre");
 
-                entity.Property(e => e.Prioridad).HasColumnName("prioridad");
-
                 entity.Property(e => e.Telefono)
                     .HasMaxLength(9)
                     .IsUnicode(false)
@@ -145,7 +143,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<EfectosSecundario>(entity =>
             {
                 entity.HasKey(e => e.IdEfecto)
-                    .HasName("PK__EFECTOS___010E34D38EF5C510");
+                    .HasName("PK__EFECTOS___010E34D393F2AE22");
 
                 entity.ToTable("EFECTOS_SECUNDARIOS");
 
@@ -160,7 +158,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<Institucion>(entity =>
             {
                 entity.HasKey(e => e.IdInstitucion)
-                    .HasName("PK__INSTITUC__680718D30FDD19BE");
+                    .HasName("PK__INSTITUC__680718D3EA9240A3");
 
                 entity.ToTable("INSTITUCION");
 
@@ -175,7 +173,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<Personal>(entity =>
             {
                 entity.HasKey(e => e.Identificador)
-                    .HasName("PK__PERSONAL__C83612B1D02451DB");
+                    .HasName("PK__PERSONAL__C83612B15FE6D34D");
 
                 entity.ToTable("PERSONAL");
 
@@ -217,7 +215,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<ProcesoCitum>(entity =>
             {
                 entity.HasKey(e => e.IdCita)
-                    .HasName("PK__PROCESO___6AEC3C09BED472A7");
+                    .HasName("PK__PROCESO___6AEC3C09482B3C7D");
 
                 entity.ToTable("PROCESO_CITA");
 
@@ -249,7 +247,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<ProcesoVacuna>(entity =>
             {
                 entity.HasKey(e => e.IdProceso)
-                    .HasName("PK__PROCESO___4D1766E4259043AE");
+                    .HasName("PK__PROCESO___4D1766E48B759D7D");
 
                 entity.ToTable("PROCESO_VACUNA");
 
@@ -274,7 +272,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<Procesocitaxprocesovacuna>(entity =>
             {
                 entity.HasKey(e => e.IdCitaXvacuna)
-                    .HasName("PK__PROCESOC__103FBF4934280590");
+                    .HasName("PK__PROCESOC__103FBF49EEDC171B");
 
                 entity.ToTable("PROCESOCITAXPROCESOVACUNA");
 
@@ -298,7 +296,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<Procesoxefecto>(entity =>
             {
                 entity.HasKey(e => e.IdProcesoXefecto)
-                    .HasName("PK__PROCESOX__CE5714A05468655C");
+                    .HasName("PK__PROCESOX__CE5714A02CDD6AC1");
 
                 entity.ToTable("PROCESOXEFECTO");
 
@@ -325,17 +323,17 @@ namespace FinalProjectBDPOO.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
+                entity.Property(e => e.Fecha)
+                    .HasColumnType("datetime")
+                    .HasColumnName("fecha");
+
+                entity.Property(e => e.Hora)
+                    .HasColumnType("datetime")
+                    .HasColumnName("hora");
+
                 entity.Property(e => e.IdCabina).HasColumnName("id_cabina");
 
                 entity.Property(e => e.Identificador).HasColumnName("identificador");
-
-                entity.Property(e => e.LogIn)
-                    .HasColumnType("datetime")
-                    .HasColumnName("log_in");
-
-                entity.Property(e => e.LogOut)
-                    .HasColumnType("datetime")
-                    .HasColumnName("log_out");
 
                 entity.HasOne(d => d.IdCabinaNavigation)
                     .WithMany(p => p.Registros)
@@ -351,7 +349,7 @@ namespace FinalProjectBDPOO.Models
             modelBuilder.Entity<TipoPersonal>(entity =>
             {
                 entity.HasKey(e => e.IdTipo)
-                    .HasName("PK__TIPO_PER__CF901089694EFFA4");
+                    .HasName("PK__TIPO_PER__CF9010892043F1B8");
 
                 entity.ToTable("TIPO_PERSONAL");
 
