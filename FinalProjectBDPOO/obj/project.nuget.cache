@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1zK3ruAFoL6MPsjv53TpqJP/y7lxU8L+Ow7jayOro3EYFhEKFGE05hD4rJzgk83uMsdCWDoGJSw5a4QcUe2gpQ==",
+  "dgSpecHash": "Rh1xALd+hMf1BIgGX7v2/oGls8ChixL2ivIRuUexRcUD/ZYWkmL3bnPRUwUz8xgpChQI8fT6Baz/9AVUM5IYyQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ferna\\OneDrive\\Escritorio\\proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
+  "projectFilePath": "C:\\Users\\ferna\\OneDrive\\Escritorio\\Proyecto\\proyecto-final-grupo-43\\FinalProjectBDPOO\\FinalProjectBDPOO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferna\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ferna\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

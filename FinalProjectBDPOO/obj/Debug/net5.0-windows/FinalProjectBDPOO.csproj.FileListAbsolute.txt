@@ -112,4 +112,4 @@ C:\Users\ferna\OneDrive\Escritorio\proyecto\proyecto-final-grupo-43\FinalProject
 C:\Users\ferna\OneDrive\Escritorio\proyecto\proyecto-final-grupo-43\FinalProjectBDPOO\obj\Debug\net5.0-windows\FinalProjectBDPOO.View.FrmProceso.resources
 C:\Users\ferna\OneDrive\Escritorio\proyecto\proyecto-final-grupo-43\FinalProjectBDPOO\obj\Debug\net5.0-windows\FinalProjectBDPOO.Properties.Resources.resources
 C:\Users\ferna\OneDrive\Escritorio\proyecto\proyecto-final-grupo-43\FinalProjectBDPOO\obj\Debug\net5.0-windows\FinalProjectBDPOO.View.frmMenuprincipal.resources
-C:\Users\ferna\OneDrive\Escritorio\proyecto\proyecto-final-grupo-43\FinalProjectBDPOO\obj\Debug\net5.0-windows\FinalProjectBDPOO.View.fmrProcesoVacuna.resources
+C:\Users\ferna\OneDrive\Escritorio\Proyecto\proyecto-final-grupo-43\FinalProjectBDPOO\obj\Debug\net5.0-windows\FinalProjectBDPOO.View.fmrVacuna.resources
