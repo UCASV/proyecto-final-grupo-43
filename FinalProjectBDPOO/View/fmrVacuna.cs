@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalProjectBDPOO.View
 {
-    public partial class fmrProcesoVacuna : Form
+    public partial class fmrVacuna : Form
     {
-        public fmrProcesoVacuna()
+        public fmrVacuna()
         {
             InitializeComponent();
         }
-
-        
     }
 }
