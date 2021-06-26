@@ -116,6 +116,7 @@ namespace FinalProjectBDPOO.View
             this.btnCrear.TabIndex = 15;
             this.btnCrear.Text = "Crear  Cita";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // lblinstitucion
             // 

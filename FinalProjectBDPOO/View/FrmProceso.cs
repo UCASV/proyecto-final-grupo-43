@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProjectBDPOO.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,24 @@ namespace FinalProjectBDPOO.View
 
         }
 
-        
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            using (var db = new ProyectoFinalContext())
+            {
+
+                var ciudadano = new Ciudadano
+                {
+                    Dui = txtDUI.Text,
+                    Nombre = txtName.Text,
+                    Edad = Int32.Parse(txtEdad.Text),
+                    Direccion = txtDireccion.Text,
+                    CorreoElectronico = txtCorreo.Text
+                };
+
+                db.Ciudadanos.Add(ciudadano);
+                db.SaveChanges();
+
+            }
+        }
     }
 }
