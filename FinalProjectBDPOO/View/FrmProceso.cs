@@ -34,7 +34,8 @@ namespace FinalProjectBDPOO.View
                     Nombre = txtName.Text,
                     Edad = Int32.Parse(txtEdad.Text),
                     Direccion = txtDireccion.Text,
-                    CorreoElectronico = txtCorreo.Text
+                    CorreoElectronico = txtCorreo.Text,
+                    
                 };
 
                 db.Ciudadanos.Add(ciudadano);

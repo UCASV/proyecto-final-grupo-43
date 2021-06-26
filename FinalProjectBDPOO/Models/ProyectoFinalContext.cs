@@ -129,6 +129,8 @@ namespace FinalProjectBDPOO.Models
                     .IsUnicode(false)
                     .HasColumnName("nombre");
 
+                entity.Property(e => e.Prioridad).HasColumnName("prioridad");
+
                 entity.HasOne(d => d.IdInstitucionNavigation)
                     .WithMany(p => p.Ciudadanos)
                     .HasForeignKey(d => d.IdInstitucion)
@@ -318,17 +320,17 @@ namespace FinalProjectBDPOO.Models
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.Fecha)
-                    .HasColumnType("datetime")
-                    .HasColumnName("fecha");
-
-                entity.Property(e => e.Hora)
-                    .HasColumnType("datetime")
-                    .HasColumnName("hora");
-
                 entity.Property(e => e.IdCabina).HasColumnName("id_cabina");
 
                 entity.Property(e => e.Identificador).HasColumnName("identificador");
+
+                entity.Property(e => e.LogIn)
+                    .HasColumnType("datetime")
+                    .HasColumnName("log_in");
+
+                entity.Property(e => e.LogOut)
+                    .HasColumnType("datetime")
+                    .HasColumnName("log_out");
 
                 entity.HasOne(d => d.IdCabinaNavigation)
                     .WithMany(p => p.Registros)

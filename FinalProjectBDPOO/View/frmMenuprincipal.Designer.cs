@@ -141,6 +141,8 @@ namespace FinalProjectBDPOO.View
             this.MinimizeBox = false;
             this.Name = "frmMenuprincipal";
             this.Text = "Menu Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMenuprincipal_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.btncerrar_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

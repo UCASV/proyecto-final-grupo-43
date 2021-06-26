@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FinalProjectBDPOO.Models;
+using FinalProjectBDPOO.Models.Session;
 using System.Windows.Forms;
 
 namespace FinalProjectBDPOO
@@ -29,12 +30,20 @@ namespace FinalProjectBDPOO
                 using (var db = new ProyectoFinalContext())
                 {
                     var usrs = db.Personals.FirstOrDefault(p => p.Usuario == txtUser.Text);
+                    var cabin = db.Cabinas.FirstOrDefault(c => c.Identificador == usrs.Identificador).IdCabina;
 
                     if (usrs != null)
                     {
                         if (txtPassword.Text == usrs.Contrasena)
                         {
-                            MessageBox.Show("Ingreso Satisfactorio", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            //Guardar Historico de LogIn de personal//
+                            var registro = new Registro { Identificador = usrs.Identificador, IdCabina = cabin, LogIn = DateTime.Now };
+                            db.Registros.Add(registro);
+                            db.SaveChanges();
+                            //Propiedad de clase estatica para identificar Session activa//
+                            Session.userID = registro.Id;
+                            //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+
                             this.Hide();
                             ventana.StartPosition = FormStartPosition.CenterScreen;
                             ventana.Show();
