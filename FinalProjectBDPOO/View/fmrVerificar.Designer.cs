@@ -29,6 +29,7 @@ namespace FinalProjectBDPOO.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmrVerificar));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblprogramada = new System.Windows.Forms.Label();
             this.dtgTodo = new System.Windows.Forms.DataGridView();
@@ -137,11 +138,12 @@ namespace FinalProjectBDPOO.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
             this.ClientSize = new System.Drawing.Size(432, 385);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "fmrVerificar";

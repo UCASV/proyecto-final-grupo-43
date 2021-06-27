@@ -22,7 +22,7 @@ namespace FinalProjectBDPOO
 
         private void btnSesion_Click(object sender, EventArgs e)
         {
-            frmMenuprincipal ventana = new frmMenuprincipal();
+            fmrMenu ventana = new fmrMenu();
 
             try
             {
