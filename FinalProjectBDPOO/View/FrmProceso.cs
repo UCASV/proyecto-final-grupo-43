@@ -61,5 +61,7 @@ namespace FinalProjectBDPOO.View
                 cmbIntitucion.ValueMember = "IdInstitucion";
             }
         }
+
+       
     }
 }

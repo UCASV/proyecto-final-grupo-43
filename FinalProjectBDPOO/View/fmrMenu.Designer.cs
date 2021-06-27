@@ -33,7 +33,11 @@ namespace FinalProjectBDPOO.View
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verificarCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.realizarCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proceoDeVacunaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +54,7 @@ namespace FinalProjectBDPOO.View
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 2;
@@ -60,17 +64,50 @@ namespace FinalProjectBDPOO.View
             // 
             this.menuStrip2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBox1});
+            this.procesosToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 27);
+            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
             this.menuStrip2.TabIndex = 3;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // toolStripComboBox1
+            // procesosToolStripMenuItem
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verificarCitasToolStripMenuItem,
+            this.realizarCitasToolStripMenuItem,
+            this.proceoDeVacunaciónToolStripMenuItem});
+            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
+            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.procesosToolStripMenuItem.Text = "Procesos";
+            // 
+            // verificarCitasToolStripMenuItem
+            // 
+            this.verificarCitasToolStripMenuItem.Name = "verificarCitasToolStripMenuItem";
+            this.verificarCitasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.verificarCitasToolStripMenuItem.Text = "Verificar Citas";
+            this.verificarCitasToolStripMenuItem.Click += new System.EventHandler(this.verificarCitasToolStripMenuItem_Click);
+            // 
+            // realizarCitasToolStripMenuItem
+            // 
+            this.realizarCitasToolStripMenuItem.Name = "realizarCitasToolStripMenuItem";
+            this.realizarCitasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.realizarCitasToolStripMenuItem.Text = "Realizar Citas";
+            this.realizarCitasToolStripMenuItem.Click += new System.EventHandler(this.realizarCitasToolStripMenuItem_Click);
+            // 
+            // proceoDeVacunaciónToolStripMenuItem
+            // 
+            this.proceoDeVacunaciónToolStripMenuItem.Name = "proceoDeVacunaciónToolStripMenuItem";
+            this.proceoDeVacunaciónToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.proceoDeVacunaciónToolStripMenuItem.Text = "Proceo de Vacunación";
+            this.proceoDeVacunaciónToolStripMenuItem.Click += new System.EventHandler(this.proceoDeVacunaciónToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
             // 
             // fmrMenu
             // 
@@ -98,6 +135,10 @@ namespace FinalProjectBDPOO.View
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verificarCitasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem realizarCitasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proceoDeVacunaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
     }
 }

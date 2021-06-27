@@ -45,12 +45,11 @@ namespace FinalProjectBDPOO.View
             this.lblName = new System.Windows.Forms.Label();
             this.lblDui = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRegresar = new System.Windows.Forms.Button();
-            this.btnCrear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.lblintitucion = new System.Windows.Forms.Label();
             this.cmbIntitucion = new System.Windows.Forms.ComboBox();
+            this.btnCrear = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,12 +74,11 @@ namespace FinalProjectBDPOO.View
             this.tableLayoutPanel1.Controls.Add(this.lblName, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblDui, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnRegresar, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.btnCrear, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtDUI, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblintitucion, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.cmbIntitucion, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.btnCrear, 1, 10);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
@@ -103,11 +101,11 @@ namespace FinalProjectBDPOO.View
             this.lblinstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblinstitucion.AutoSize = true;
             this.lblinstitucion.ForeColor = System.Drawing.Color.Black;
-            this.lblinstitucion.Location = new System.Drawing.Point(3, 328);
+            this.lblinstitucion.Location = new System.Drawing.Point(3, 320);
             this.lblinstitucion.Name = "lblinstitucion";
-            this.lblinstitucion.Size = new System.Drawing.Size(124, 15);
+            this.lblinstitucion.Size = new System.Drawing.Size(124, 30);
             this.lblinstitucion.TabIndex = 7;
-            this.lblinstitucion.Text = "Enfermedades";
+            this.lblinstitucion.Text = "Enfermedad o Discapacidad";
             this.lblinstitucion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtEnfermedad
@@ -149,6 +147,7 @@ namespace FinalProjectBDPOO.View
             this.lbldireccion.TabIndex = 4;
             this.lbldireccion.Text = "Direccion";
             this.lbldireccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            
             // 
             // txtDireccion
             // 
@@ -244,31 +243,6 @@ namespace FinalProjectBDPOO.View
             this.label2.Text = "PROCESO DE CITAS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnRegresar
-            // 
-            this.btnRegresar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegresar.BackColor = System.Drawing.Color.White;
-            this.btnRegresar.Location = new System.Drawing.Point(3, 429);
-            this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(124, 23);
-            this.btnRegresar.TabIndex = 16;
-            this.btnRegresar.Text = "Menu Principal";
-            this.btnRegresar.UseVisualStyleBackColor = false;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
-            // 
-            // btnCrear
-            // 
-            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrear.Location = new System.Drawing.Point(318, 429);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(115, 23);
-            this.btnCrear.TabIndex = 15;
-            this.btnCrear.Text = "Crear  Cita";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -307,6 +281,18 @@ namespace FinalProjectBDPOO.View
             this.cmbIntitucion.Name = "cmbIntitucion";
             this.cmbIntitucion.Size = new System.Drawing.Size(179, 23);
             this.cmbIntitucion.TabIndex = 19;
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.Location = new System.Drawing.Point(133, 429);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(179, 23);
+            this.btnCrear.TabIndex = 15;
+            this.btnCrear.Text = "Crear  Cita";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // FrmProceso
             // 
@@ -347,7 +333,6 @@ namespace FinalProjectBDPOO.View
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtEnfermedad;
         private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblintitucion;
         private System.Windows.Forms.ComboBox cmbIntitucion;
