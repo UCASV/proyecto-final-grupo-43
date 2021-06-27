@@ -60,7 +60,7 @@ namespace FinalProjectBDPOO.View
                     headerTable.AddCell("Gobierno de El Salvador");
                     headerTable.AddCell("Vacunas ");
                     headerTable.AddCell("Fecha de Reporte");
-                    headerTable.AddCell(DateTime.Now.Date.ToString("yyyy-MMMM-dd (es-ES)"));
+                    headerTable.AddCell(DateTime.Now.Date.ToString("yyyy-MMMM-dd"));
 
                     doc.Add(headerTable);
 
@@ -95,6 +95,41 @@ namespace FinalProjectBDPOO.View
 
             }
 
+        }
+
+        private void fmrVerificar_Load(object sender, EventArgs e)
+        {
+            if (Session.idCita != 0)
+            {
+                this.btnBuscar.Enabled = false;
+                this.txtDui.Enabled = false;
+
+                using (var db = new ProyectoFinalContext())
+                {
+                    var result = db.ProcesoCita.Join(db.Ciudadanos, p => p.Id, c => c.Id,
+                        (p, c) => new {
+                            Id = p.IdCita,
+                            Nombre_Paciente = c.Nombre,
+                            Dui = c.Dui,
+                            Fecha_Cita = p.Fecha
+                        }).Where(p => p.Id == Session.idCita).ToList();
+
+
+                    dtgTodo.DataSource = result;
+
+
+                }
+                Session.idCita = 0;
+            }
+
+        }
+
+        internal void ShowObj()
+        {
+            this.Show();
+            object sender = null;
+            EventArgs e = null;
+            fmrVerificar_Load(sender,e);
         }
     }
 }

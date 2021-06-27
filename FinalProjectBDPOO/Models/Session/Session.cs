@@ -11,5 +11,7 @@ namespace FinalProjectBDPOO.Models.Session
         public static int userID { get; set; }
 
         public static int gestorId { get; set; }
+
+        public static int idCita { get; set; }
     }
 }

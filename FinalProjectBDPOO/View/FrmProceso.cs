@@ -94,6 +94,13 @@ namespace FinalProjectBDPOO.View
                     db.ProcesoCita.Add(cita);
                     db.SaveChanges();
 
+                    this.Close();
+
+                    Session.idCita = (int)cita.IdCita;
+                    fmrVerificar frmVerificar = new fmrVerificar();
+                    frmVerificar.ShowObj();
+                    
+
                 }
             }
         }
