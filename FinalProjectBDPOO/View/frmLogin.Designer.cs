@@ -68,8 +68,8 @@ namespace FinalProjectBDPOO
             // 
             this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
-            this.lblUser.ForeColor = System.Drawing.Color.White;
+            this.lblUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
+            this.lblUser.ForeColor = System.Drawing.Color.Black;
             this.lblUser.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblUser.Location = new System.Drawing.Point(3, 118);
             this.lblUser.Name = "lblUser";
@@ -82,8 +82,8 @@ namespace FinalProjectBDPOO
             // 
             this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.AutoSize = true;
-            this.lblPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
-            this.lblPassword.ForeColor = System.Drawing.Color.White;
+            this.lblPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
+            this.lblPassword.ForeColor = System.Drawing.Color.Black;
             this.lblPassword.Location = new System.Drawing.Point(3, 168);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(107, 15);
@@ -135,8 +135,8 @@ namespace FinalProjectBDPOO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(58)))), ((int)(((byte)(67)))));
-            this.ClientSize = new System.Drawing.Size(385, 399);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
+            this.ClientSize = new System.Drawing.Size(385, 292);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProjectBDPOO.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,23 @@ namespace FinalProjectBDPOO.View
         public fmrVacuna()
         {
             InitializeComponent();
+        }
+
+        private void fmrVacuna_Load(object sender, EventArgs e)
+        {
+            using (var db = new ProyectoFinalContext())
+            {
+                List<EfectosSecundario> efectosSecundarios = db.EfectosSecundarios.ToList();
+
+                cmbEfectos.DataSource = efectosSecundarios;
+                cmbEfectos.DisplayMember = "Descripcion";
+                cmbEfectos.ValueMember = "IdEfecto";
+
+                List<Personal> personals = db.Personals.ToList();
+
+                cmbidentificador.DataSource = personals;
+                cmbidentificador.DisplayMember = "Identificador";
+            }
         }
     }
 }
