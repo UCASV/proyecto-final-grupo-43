@@ -58,9 +58,9 @@ namespace FinalProjectBDPOO.View
                     var headerTable = new Table(2, true);
 
                     headerTable.AddCell("Gobierno de El Salvador");
-                    headerTable.AddCell("NombreTest");
+                    headerTable.AddCell("Vacunas ");
                     headerTable.AddCell("Fecha de Reporte");
-                    headerTable.AddCell(DateTime.Now.Date.ToString());
+                    headerTable.AddCell(DateTime.Now.Date.ToString("yyyy-MMMM-dd (es-ES)"));
 
                     doc.Add(headerTable);
 
