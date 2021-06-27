@@ -1,10 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using FinalProjectBDPOO.Models;
 
 #nullable disable
 
-namespace FinalProjectBDPOO.Models
+namespace FinalProjectBDPOO.Context
 {
     public partial class ProyectoFinalContext : DbContext
     {
@@ -35,7 +36,7 @@ namespace FinalProjectBDPOO.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=localhost;Database=ProyectoFial;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Data Source=INFRAFCORTEZ;Initial Catalog=ProyectoFinal;Integrated Security=True;");
             }
         }
 

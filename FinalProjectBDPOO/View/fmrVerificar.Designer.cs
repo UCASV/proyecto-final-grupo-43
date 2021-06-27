@@ -82,11 +82,13 @@ namespace FinalProjectBDPOO.View
             // 
             this.dtgTodo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgTodo.BackgroundColor = System.Drawing.Color.White;
+            this.dtgTodo.BackgroundColor = System.Drawing.Color.Gray;
             this.dtgTodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dtgTodo, 2);
+            this.dtgTodo.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dtgTodo.Location = new System.Drawing.Point(3, 154);
             this.dtgTodo.Name = "dtgTodo";
+            this.dtgTodo.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgTodo.RowTemplate.Height = 25;
             this.dtgTodo.Size = new System.Drawing.Size(426, 148);
             this.dtgTodo.TabIndex = 1;
@@ -121,6 +123,7 @@ namespace FinalProjectBDPOO.View
             this.btnGenerar.TabIndex = 5;
             this.btnGenerar.Text = "Generar PDF";
             this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // btnBuscar
             // 
@@ -132,6 +135,7 @@ namespace FinalProjectBDPOO.View
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar Citas";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // fmrVerificar
             // 

@@ -74,6 +74,7 @@ namespace FinalProjectBDPOO.View
             this.btnverificar.TabIndex = 2;
             this.btnverificar.Text = "Verificar cita existente";
             this.btnverificar.UseVisualStyleBackColor = false;
+            this.btnverificar.Click += new System.EventHandler(this.btnverificar_Click);
             // 
             // label1
             // 

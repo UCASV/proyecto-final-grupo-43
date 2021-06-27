@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FinalProjectBDPOO.Models;
 using FinalProjectBDPOO.Models.Session;
+using FinalProjectBDPOO.Context;
 using System.Windows.Forms;
 
 namespace FinalProjectBDPOO
@@ -42,6 +43,7 @@ namespace FinalProjectBDPOO
                             db.SaveChanges();
                             //Propiedad de clase estatica para identificar Session activa//
                             Session.userID = registro.Id;
+                            Session.gestorId = usrs.Identificador;
                             //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
                             this.Hide();

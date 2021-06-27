@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProjectBDPOO.Models.Session;
+using FinalProjectBDPOO.Context;
+using FinalProjectBDPOO.View;
 
 namespace FinalProjectBDPOO.View
 {
@@ -57,6 +59,12 @@ namespace FinalProjectBDPOO.View
         private void frmMenuprincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+        }
+
+        private void btnverificar_Click(object sender, EventArgs e)
+        {
+            fmrVerificar frm = new fmrVerificar();
+            frm.ShowDialog();
         }
     }
 }
