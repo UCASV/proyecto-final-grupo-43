@@ -1,7 +1,7 @@
 ﻿using System;
+using FinalProjectBDPOO.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using FinalProjectBDPOO.Models;
 
 #nullable disable
 
@@ -130,8 +130,6 @@ namespace FinalProjectBDPOO.Context
                     .IsUnicode(false)
                     .HasColumnName("nombre");
 
-                entity.Property(e => e.Prioridad).HasColumnName("prioridad");
-
                 entity.Property(e => e.Telefono)
                     .HasMaxLength(9)
                     .IsUnicode(false)
@@ -227,10 +225,6 @@ namespace FinalProjectBDPOO.Context
                 entity.Property(e => e.Fecha)
                     .HasColumnType("datetime")
                     .HasColumnName("fecha");
-
-                entity.Property(e => e.Hora)
-                    .HasColumnType("datetime")
-                    .HasColumnName("hora");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
