@@ -63,7 +63,7 @@ namespace FinalProjectBDPOO.View
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 291F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(432, 519);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(633, 519);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblprogramada
@@ -74,7 +74,7 @@ namespace FinalProjectBDPOO.View
             this.lblprogramada.Font = new System.Drawing.Font("Stencil", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblprogramada.Location = new System.Drawing.Point(3, 16);
             this.lblprogramada.Name = "lblprogramada";
-            this.lblprogramada.Size = new System.Drawing.Size(426, 18);
+            this.lblprogramada.Size = new System.Drawing.Size(627, 18);
             this.lblprogramada.TabIndex = 0;
             this.lblprogramada.Text = "CITA PROGRAMADA";
             this.lblprogramada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,7 +91,7 @@ namespace FinalProjectBDPOO.View
             this.dtgTodo.Name = "dtgTodo";
             this.dtgTodo.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dtgTodo.RowTemplate.Height = 25;
-            this.dtgTodo.Size = new System.Drawing.Size(426, 148);
+            this.dtgTodo.Size = new System.Drawing.Size(627, 148);
             this.dtgTodo.TabIndex = 1;
             // 
             // txtDui
@@ -99,7 +99,7 @@ namespace FinalProjectBDPOO.View
             this.txtDui.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDui.Location = new System.Drawing.Point(3, 106);
             this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(210, 23);
+            this.txtDui.Size = new System.Drawing.Size(310, 23);
             this.txtDui.TabIndex = 2;
             // 
             // lblIngresar
@@ -108,7 +108,7 @@ namespace FinalProjectBDPOO.View
             this.lblIngresar.AutoSize = true;
             this.lblIngresar.Location = new System.Drawing.Point(3, 70);
             this.lblIngresar.Name = "lblIngresar";
-            this.lblIngresar.Size = new System.Drawing.Size(210, 15);
+            this.lblIngresar.Size = new System.Drawing.Size(310, 15);
             this.lblIngresar.TabIndex = 4;
             this.lblIngresar.Text = "Ingresar DUI";
             this.lblIngresar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,9 +118,9 @@ namespace FinalProjectBDPOO.View
             this.btnGenerar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerar.ForeColor = System.Drawing.Color.Black;
-            this.btnGenerar.Location = new System.Drawing.Point(219, 331);
+            this.btnGenerar.Location = new System.Drawing.Point(319, 331);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(210, 33);
+            this.btnGenerar.Size = new System.Drawing.Size(311, 33);
             this.btnGenerar.TabIndex = 5;
             this.btnGenerar.Text = "Generar PDF";
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -130,9 +130,9 @@ namespace FinalProjectBDPOO.View
             // 
             this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(219, 104);
+            this.btnBuscar.Location = new System.Drawing.Point(319, 104);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(210, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(311, 28);
             this.btnBuscar.TabIndex = 6;
             this.btnBuscar.Text = "Buscar Citas";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -143,7 +143,7 @@ namespace FinalProjectBDPOO.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(208)))), ((int)(((byte)(233)))));
-            this.ClientSize = new System.Drawing.Size(432, 385);
+            this.ClientSize = new System.Drawing.Size(629, 385);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.ForeColor = System.Drawing.Color.Black;
