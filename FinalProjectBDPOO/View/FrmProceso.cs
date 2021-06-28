@@ -51,9 +51,9 @@ namespace FinalProjectBDPOO.View
                     //OBTENER LISTA DE CITAS AGENDAS PARA DIAS SIGUIENTES
                     var citas = db.ProcesoCita.Where(p => p.Fecha > DateTime.Now).OrderByDescending(p => p.IdCita).FirstOrDefault();
                     //DEFINIR FORMATO DE HORA 
-                    var date = DateTime.ParseExact(DateTime.Now.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
-                    //AÑADIR UN DÍA
-                    date = date.AddHours(5);
+                    var date = DateTime.ParseExact(citas.Fecha.Value.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
+                    //AÑADIR MAS TIEMPO A LA ULTIMA HORA GUARDADA
+                    date = date.AddHours(1);
 
                     //SI LA HORA SUPERA LAS 5 DE LA TARDE LA PASA AL SIGUIENTE DÍA
                     if (date.Hour >= 18)
@@ -96,7 +96,7 @@ namespace FinalProjectBDPOO.View
 
                     this.Close();
 
-                    Session.idCita = (int)cita.IdCita;
+                    Session.idCita = cita.IdCita;
                     fmrVerificar frmVerificar = new fmrVerificar();
                     frmVerificar.ShowObj();
                     

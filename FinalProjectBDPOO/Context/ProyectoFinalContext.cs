@@ -1,7 +1,7 @@
 ﻿using System;
+using FinalProjectBDPOO.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using FinalProjectBDPOO.Models;
 
 #nullable disable
 
@@ -36,7 +36,7 @@ namespace FinalProjectBDPOO.Context
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=localhost;Database=ProyectoFinal;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Data Source=INFRAFCORTEZ;Initial Catalog=ProyectoFinal;Integrated Security=True;");
             }
         }
 
@@ -129,8 +129,6 @@ namespace FinalProjectBDPOO.Context
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nombre");
-
-                
 
                 entity.Property(e => e.Telefono)
                     .HasMaxLength(9)
@@ -227,10 +225,6 @@ namespace FinalProjectBDPOO.Context
                 entity.Property(e => e.Fecha)
                     .HasColumnType("datetime")
                     .HasColumnName("fecha");
-
-                entity.Property(e => e.Hora)
-                    .HasColumnType("datetime")
-                    .HasColumnName("hora");
 
                 entity.Property(e => e.Id).HasColumnName("id");
 

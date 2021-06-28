@@ -14,7 +14,6 @@ namespace FinalProjectBDPOO.Models
 
         public int IdCita { get; set; }
         public DateTime? Fecha { get; set; }
-        public DateTime? Hora { get; set; }
         public int? Id { get; set; }
         public int? Identificador { get; set; }
 

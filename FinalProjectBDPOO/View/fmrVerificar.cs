@@ -14,6 +14,7 @@ using iText.Layout;
 using iText.Layout.Element;
 using FinalProjectBDPOO.Models.Session;
 using iText.Layout.Properties;
+using System.Globalization;
 
 namespace FinalProjectBDPOO.View
 {
@@ -27,15 +28,15 @@ namespace FinalProjectBDPOO.View
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            using ( var db = new ProyectoFinalContext())
+            using (var db = new ProyectoFinalContext())
             {
                 var result = db.ProcesoCita.Join(db.Ciudadanos, p => p.Id, c => c.Id,
-                    (p, c) => new { 
+                    (p, c) => new {
                         Id = p.IdCita,
                         Nombre_Paciente = c.Nombre,
                         Dui = c.Dui,
                         Fecha_Cita = p.Fecha
-                    }).Where(r => r.Dui == txtDui.Text) .ToList();
+                    }).Where(r => r.Dui == txtDui.Text).ToList();
 
                 dtgTodo.DataSource = result;
 
@@ -90,7 +91,7 @@ namespace FinalProjectBDPOO.View
 
                     doc.Add(table);
                     doc.Close();
-                    
+
                 }
 
             }
@@ -122,6 +123,62 @@ namespace FinalProjectBDPOO.View
                 Session.idCita = 0;
             }
 
+        }
+
+        internal void SegundaCita(){
+
+            using (var db = new ProyectoFinalContext()) 
+            {
+                var userId = db.Ciudadanos.Where(c => c.Dui == txtDui.Text).FirstOrDefault().Id;
+
+                //OBTENER LISTA DE CITAS AGENDAS PARA DIAS SIGUIENTES
+                var citas = db.ProcesoCita.Where(p => p.Fecha > DateTime.Now).OrderByDescending(p => p.IdCita).FirstOrDefault();
+                //DEFINIR FORMATO DE HORA 
+                var date = DateTime.ParseExact(citas.Fecha.Value.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
+                //AÑADIR MAS TIEMPO A LA ULTIMA HORA GUARDADA
+                date = date.AddHours(1);
+
+                //SI LA HORA SUPERA LAS 5 DE LA TARDE LA PASA AL SIGUIENTE DÍA
+                if (date.Hour >= 18)
+                {
+                    date = date.AddDays(1);
+                    //DEFINIR HORA INICIAL DE CITAS
+                    var time = new TimeSpan(08, 00, 00);
+                    //SETEAR FORMATO TOTAL DE FECHA Y HORA
+                    date = date.Date + time;
+                }
+                if (date.Hour <= 08)
+                {
+                    //DEFINIR HORA INICIAL DE CITAS
+                    var time = new TimeSpan(08, 00, 00);
+                    //SETEAR FORMATO TOTAL DE FECHA Y HORA
+                    date = date.Date + time;
+                }
+
+                //SI LA SIGUIENTE CITA ES UN DÍA FIN DE SEMANA LA PASA AL DÍA LUNES
+                if ((int)date.DayOfWeek == 6)
+                {
+                    date = date.AddDays(2);
+                }
+                if ((int)date.DayOfWeek == 0)
+                {
+                    date = date.AddDays(1);
+                }
+
+                //SEGUIDAMENTE AGENDA Y GUARDA LA INFORMACIÓN DE LA CITA EN LA BASE DE DATOS
+                var cita = new ProcesoCitum
+                {
+
+                    Id = userId,
+                    Identificador = Session.gestorId,
+                    Fecha = date
+
+                };
+                db.ProcesoCita.Add(cita);
+                db.SaveChanges();
+                Session.idCita = cita.IdCita;
+                this.ShowObj();
+            }
         }
 
         internal void ShowObj()
