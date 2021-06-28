@@ -76,22 +76,22 @@ namespace FinalProjectBDPOO.View
             // verificarCitasToolStripMenuItem
             // 
             this.verificarCitasToolStripMenuItem.Name = "verificarCitasToolStripMenuItem";
-            this.verificarCitasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.verificarCitasToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.verificarCitasToolStripMenuItem.Text = "Verificar Citas";
             this.verificarCitasToolStripMenuItem.Click += new System.EventHandler(this.verificarCitasToolStripMenuItem_Click);
             // 
             // realizarCitasToolStripMenuItem
             // 
             this.realizarCitasToolStripMenuItem.Name = "realizarCitasToolStripMenuItem";
-            this.realizarCitasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.realizarCitasToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.realizarCitasToolStripMenuItem.Text = "Realizar Citas";
             this.realizarCitasToolStripMenuItem.Click += new System.EventHandler(this.realizarCitasToolStripMenuItem_Click);
             // 
             // proceoDeVacunaciónToolStripMenuItem
             // 
             this.proceoDeVacunaciónToolStripMenuItem.Name = "proceoDeVacunaciónToolStripMenuItem";
-            this.proceoDeVacunaciónToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.proceoDeVacunaciónToolStripMenuItem.Text = "Proceo de Vacunación";
+            this.proceoDeVacunaciónToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.proceoDeVacunaciónToolStripMenuItem.Text = "Proceso de Vacunación";
             this.proceoDeVacunaciónToolStripMenuItem.Click += new System.EventHandler(this.proceoDeVacunaciónToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
@@ -99,6 +99,7 @@ namespace FinalProjectBDPOO.View
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
             this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // fmrMenu
             // 

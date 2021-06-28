@@ -63,5 +63,32 @@ namespace FinalProjectBDPOO.View
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var db = new ProyectoFinalContext())
+                {
+                    var register = db.Registros.Find(Session.userID);
+
+                    if (register != null)
+                    {
+                        register.LogOut = DateTime.Now;
+                        db.SaveChanges();
+
+                        Application.Exit();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ha ocurrido un problema, por favor contacte al desarrollador.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
