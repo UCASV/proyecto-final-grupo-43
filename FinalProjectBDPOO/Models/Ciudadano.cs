@@ -20,8 +20,7 @@ namespace FinalProjectBDPOO.Models
         public string Direccion { get; set; }
         public string CorreoElectronico { get; set; }
         public string EnfermedadCronica { get; set; }
-        public int? IdInstitucion { get; set; }
-        public bool? Prioridad { get; set; }
+        public int? IdInstitucion { get; set; } 
         public string Telefono { get; set; }
 
         public virtual Institucion IdInstitucionNavigation { get; set; }
