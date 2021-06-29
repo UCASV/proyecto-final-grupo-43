@@ -51,7 +51,7 @@ Al finalizar la instalación, se nos mostrara una pestaña con opciones, ya que 
 
 ## Base de datos existente
 
-Para utilizar el programa creado, se necesita usar la base de datos creada especificamente para este proyecto en especifico, utilizamos una cadena de conexión al IDE de Visual Studio para vincularlo, ya que contaba con las tablas y valores hechas para solo desarrollarlo por código.
+Para utilizar el programa creado, se necesita usar la base de datos creada para este proyecto en especifico, utilizamos una cadena de conexión al IDE de Visual Studio para vincularlo, ya que contaba con las tablas y valores hechos para solo desarrollarlo por código.
 
 
 
