@@ -39,6 +39,8 @@ namespace FinalProjectBDPOO.View
                 }
                 else if ((Int32.Parse(txtEdad.Text) > 60) || (Int32.Parse(cmbIntitucion.SelectedValue.ToString()) != 1) || (txtEnfermedad.Text != "" && Int32.Parse(txtEdad.Text) > 18))
                 {
+                    DateTime date;
+
                     //ALMACENA LA INFORMACIÓN DEL CIUDADANO A SER VACUNADO
                     var ciudadano = new Ciudadano
                     {
@@ -56,8 +58,15 @@ namespace FinalProjectBDPOO.View
 
                     //OBTENER LISTA DE CITAS AGENDAS PARA DIAS SIGUIENTES
                     var citas = db.ProcesoCita.OrderByDescending(p => p.IdCita).FirstOrDefault();
-                    //DEFINIR FORMATO DE HORA 
-                    var date = DateTime.ParseExact(citas.Fecha.Value.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
+                    if (citas == null)
+                    {
+                        date = DateTime.ParseExact(DateTime.Now.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
+                    }
+                    else
+                    {
+                        //DEFINIR FORMATO DE HORA 
+                        date = DateTime.ParseExact(citas.Fecha.Value.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
+                    }
                     //AÑADIR MAS TIEMPO A LA ULTIMA HORA GUARDADA
                     date = date.AddHours(1);
 

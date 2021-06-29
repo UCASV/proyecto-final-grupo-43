@@ -16,12 +16,12 @@ namespace FinalProjectBDPOO.Models
         public int Id { get; set; }
         public string Dui { get; set; }
         public string Nombre { get; set; }
+        public string Telefono { get; set; }
         public int? Edad { get; set; }
         public string Direccion { get; set; }
         public string CorreoElectronico { get; set; }
         public string EnfermedadCronica { get; set; }
         public int? IdInstitucion { get; set; }
-        public string Telefono { get; set; }
 
         public virtual Institucion IdInstitucionNavigation { get; set; }
         public virtual ICollection<Cabinaxciudadano> Cabinaxciudadanos { get; set; }

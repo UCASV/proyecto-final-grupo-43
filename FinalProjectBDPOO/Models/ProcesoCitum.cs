@@ -7,11 +7,6 @@ namespace FinalProjectBDPOO.Models
 {
     public partial class ProcesoCitum
     {
-        public ProcesoCitum()
-        {
-            Procesocitaxprocesovacunas = new HashSet<Procesocitaxprocesovacuna>();
-        }
-
         public int IdCita { get; set; }
         public DateTime? Fecha { get; set; }
         public int? Id { get; set; }
@@ -19,6 +14,5 @@ namespace FinalProjectBDPOO.Models
 
         public virtual Ciudadano IdNavigation { get; set; }
         public virtual Personal IdentificadorNavigation { get; set; }
-        public virtual ICollection<Procesocitaxprocesovacuna> Procesocitaxprocesovacunas { get; set; }
     }
 }

@@ -35,7 +35,7 @@ namespace FinalProjectBDPOO.View
                 cmbEfectos.DisplayMember = "Descripcion";
                 cmbEfectos.ValueMember = "IdEfecto";
 
-                List<Personal> personals = db.Personals.ToList();
+                List<Personal> personals = db.Personals.Where(p => p.IdTipo == 2).ToList();
 
                 cmbidentificador.DataSource = personals;
                 cmbidentificador.DisplayMember = "Nombre";

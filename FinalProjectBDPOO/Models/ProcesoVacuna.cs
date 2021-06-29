@@ -9,7 +9,6 @@ namespace FinalProjectBDPOO.Models
     {
         public ProcesoVacuna()
         {
-            Procesocitaxprocesovacunas = new HashSet<Procesocitaxprocesovacuna>();
             Procesoxefectos = new HashSet<Procesoxefecto>();
         }
 
@@ -19,7 +18,6 @@ namespace FinalProjectBDPOO.Models
         public int? Identificador { get; set; }
 
         public virtual Personal IdentificadorNavigation { get; set; }
-        public virtual ICollection<Procesocitaxprocesovacuna> Procesocitaxprocesovacunas { get; set; }
         public virtual ICollection<Procesoxefecto> Procesoxefectos { get; set; }
     }
 }
