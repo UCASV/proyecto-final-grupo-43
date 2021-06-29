@@ -36,7 +36,7 @@ namespace FinalProjectBDPOO.View
                 date = date.AddHours(1);
 
                 //SI LA HORA SUPERA LAS 5 DE LA TARDE LA PASA AL SIGUIENTE DÍA
-                if (date.Hour >= 18)
+                if (date.Hour >= 18 || (date.Hour < DateTime.Now.Hour && date == DateTime.Now))
                 {
                     date = date.AddDays(1);
                     //DEFINIR HORA INICIAL DE CITAS
