@@ -49,9 +49,17 @@ Abrimos el instalador y se nos darán 3 opciones de instalación, la básica, pe
 
 Al finalizar la instalación, se nos mostrara una pestaña con opciones, ya que hasta el momento solo hemos instalado un **Motor de bases de datos**, en las opciones que se nos presentan en esta pestaña está "Instalar SSMS", que es un gestor grafico para el motor de bases de datos que utilizaremos, procedemos a instalarlo y ahora si, estamos listos para poder usar **SQL Server.**
 
+## Patrón de diseño
+
+**Abstract Factory** (fábrica abstracta): permite trabajar con objetos de distintas familias de manera que las familias no se mezclen entre sí y haciendo transparente el tipo de familia concreta que se esté usando. El problema a solucionar por este patrón es el de crear diferentes familias de objetos, como por ejemplo, la creación de interfaces gráficas de distintos tipos (ventana, menú, botón, etc.).
+
+
+
 ## Base de datos existente
 
 Para utilizar el programa creado, se necesita usar la base de datos creada para este proyecto en especifico, utilizamos una cadena de conexión al IDE de Visual Studio para vincularlo, ya que contaba con las tablas y valores hechos para solo desarrollarlo por código.
+
+En la base de datos ya hay datos insertados con los cuales el programa puede funcionar, también se permite agregar y eliminar datos dentro de la base.
 
 
 
