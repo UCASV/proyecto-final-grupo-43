@@ -1,7 +1,7 @@
 ﻿using System;
-using FinalProjectBDPOO.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using FinalProjectBDPOO.Models;
 
 #nullable disable
 
@@ -26,7 +26,6 @@ namespace FinalProjectBDPOO.Context
         public virtual DbSet<Personal> Personals { get; set; }
         public virtual DbSet<ProcesoCitum> ProcesoCita { get; set; }
         public virtual DbSet<ProcesoVacuna> ProcesoVacunas { get; set; }
-        public virtual DbSet<Procesocitaxprocesovacuna> Procesocitaxprocesovacunas { get; set; }
         public virtual DbSet<Procesoxefecto> Procesoxefectos { get; set; }
         public virtual DbSet<Registro> Registros { get; set; }
         public virtual DbSet<TipoPersonal> TipoPersonals { get; set; }
@@ -47,7 +46,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<Cabina>(entity =>
             {
                 entity.HasKey(e => e.IdCabina)
-                    .HasName("PK__CABINA__FAD33CFDCA720F9F");
+                    .HasName("PK__CABINA__FAD33CFD585830F4");
 
                 entity.ToTable("CABINA");
 
@@ -74,7 +73,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<Cabinaxciudadano>(entity =>
             {
                 entity.HasKey(e => e.IdCabinaXciudadano)
-                    .HasName("PK__CABINAXC__BA17E723DFC0AE14");
+                    .HasName("PK__CABINAXC__BA17E723D5326DD0");
 
                 entity.ToTable("CABINAXCIUDADANO");
 
@@ -144,7 +143,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<EfectosSecundario>(entity =>
             {
                 entity.HasKey(e => e.IdEfecto)
-                    .HasName("PK__EFECTOS___010E34D38EF5C510");
+                    .HasName("PK__EFECTOS___010E34D34810F81A");
 
                 entity.ToTable("EFECTOS_SECUNDARIOS");
 
@@ -159,7 +158,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<Institucion>(entity =>
             {
                 entity.HasKey(e => e.IdInstitucion)
-                    .HasName("PK__INSTITUC__680718D30FDD19BE");
+                    .HasName("PK__INSTITUC__680718D35561EC1A");
 
                 entity.ToTable("INSTITUCION");
 
@@ -174,7 +173,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<Personal>(entity =>
             {
                 entity.HasKey(e => e.Identificador)
-                    .HasName("PK__PERSONAL__C83612B1D02451DB");
+                    .HasName("PK__PERSONAL__C83612B1EFDB078F");
 
                 entity.ToTable("PERSONAL");
 
@@ -216,7 +215,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<ProcesoCitum>(entity =>
             {
                 entity.HasKey(e => e.IdCita)
-                    .HasName("PK__PROCESO___6AEC3C09BED472A7");
+                    .HasName("PK__PROCESO___6AEC3C09E8E203DC");
 
                 entity.ToTable("PROCESO_CITA");
 
@@ -244,7 +243,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<ProcesoVacuna>(entity =>
             {
                 entity.HasKey(e => e.IdProceso)
-                    .HasName("PK__PROCESO___4D1766E4259043AE");
+                    .HasName("PK__PROCESO___4D1766E4D435E971");
 
                 entity.ToTable("PROCESO_VACUNA");
 
@@ -266,34 +265,10 @@ namespace FinalProjectBDPOO.Context
                     .HasConstraintName("FK_IDENTIFICADOR_PERSONAL");
             });
 
-            modelBuilder.Entity<Procesocitaxprocesovacuna>(entity =>
-            {
-                entity.HasKey(e => e.IdCitaXvacuna)
-                    .HasName("PK__PROCESOC__103FBF4934280590");
-
-                entity.ToTable("PROCESOCITAXPROCESOVACUNA");
-
-                entity.Property(e => e.IdCitaXvacuna).HasColumnName("id_citaXvacuna");
-
-                entity.Property(e => e.IdCita).HasColumnName("id_cita");
-
-                entity.Property(e => e.IdProceso).HasColumnName("id_proceso");
-
-                entity.HasOne(d => d.IdCitaNavigation)
-                    .WithMany(p => p.Procesocitaxprocesovacunas)
-                    .HasForeignKey(d => d.IdCita)
-                    .HasConstraintName("FK_PROCITA");
-
-                entity.HasOne(d => d.IdProcesoNavigation)
-                    .WithMany(p => p.Procesocitaxprocesovacunas)
-                    .HasForeignKey(d => d.IdProceso)
-                    .HasConstraintName("FK_PROVACUNA");
-            });
-
             modelBuilder.Entity<Procesoxefecto>(entity =>
             {
                 entity.HasKey(e => e.IdProcesoXefecto)
-                    .HasName("PK__PROCESOX__CE5714A05468655C");
+                    .HasName("PK__PROCESOX__CE5714A07ACA2D32");
 
                 entity.ToTable("PROCESOXEFECTO");
 
@@ -346,7 +321,7 @@ namespace FinalProjectBDPOO.Context
             modelBuilder.Entity<TipoPersonal>(entity =>
             {
                 entity.HasKey(e => e.IdTipo)
-                    .HasName("PK__TIPO_PER__CF901089694EFFA4");
+                    .HasName("PK__TIPO_PER__CF9010892475AC70");
 
                 entity.ToTable("TIPO_PERSONAL");
 
