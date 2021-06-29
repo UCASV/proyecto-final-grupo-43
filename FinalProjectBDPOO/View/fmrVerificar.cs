@@ -132,7 +132,7 @@ namespace FinalProjectBDPOO.View
                 var userId = db.Ciudadanos.Where(c => c.Dui == txtDui.Text).FirstOrDefault().Id;
 
                 //OBTENER LISTA DE CITAS AGENDAS PARA DIAS SIGUIENTES
-                var citas = db.ProcesoCita.Where(p => p.Fecha > DateTime.Now).OrderByDescending(p => p.IdCita).FirstOrDefault();
+                var citas = db.ProcesoCita.OrderByDescending(p => p.IdCita).FirstOrDefault();
                 //DEFINIR FORMATO DE HORA 
                 var date = DateTime.ParseExact(citas.Fecha.Value.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
                 //AÑADIR MAS TIEMPO A LA ULTIMA HORA GUARDADA
