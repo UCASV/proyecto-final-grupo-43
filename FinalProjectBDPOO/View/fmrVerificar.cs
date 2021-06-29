@@ -48,7 +48,7 @@ namespace FinalProjectBDPOO.View
         {
 
             var exportFolder = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            var exportFile = System.IO.Path.Combine(exportFolder, "Super.pdf");
+            var exportFile = System.IO.Path.Combine(exportFolder, "ComprobanteCita.pdf");
 
             using (var writter = new PdfWriter(exportFile))
             {
@@ -56,10 +56,11 @@ namespace FinalProjectBDPOO.View
                 {
                     var doc = new Document(pdf);
 
-                    var headerTable = new Table(2, true);
+                    float[] columnHeaderWidths = { 10, 10};
+                    var headerTable = new Table(UnitValue.CreatePercentArray(columnHeaderWidths));
 
                     headerTable.AddCell("Gobierno de El Salvador");
-                    headerTable.AddCell("Vacunas ");
+                    headerTable.AddCell("Proceso de Vacunación ");
                     headerTable.AddCell("Fecha de Reporte");
                     headerTable.AddCell(DateTime.Now.Date.ToString("yyyy-MMMM-dd"));
 
@@ -126,62 +127,6 @@ namespace FinalProjectBDPOO.View
                 Session.idCita = 0;
             }
 
-        }
-
-        internal void SegundaCita(){
-
-            using (var db = new ProyectoFinalContext()) 
-            {
-                var userId = db.Ciudadanos.Where(c => c.Dui == txtDui.Text).FirstOrDefault().Id;
-
-                //OBTENER LISTA DE CITAS AGENDAS PARA DIAS SIGUIENTES
-                var citas = db.ProcesoCita.OrderByDescending(p => p.IdCita).FirstOrDefault();
-                //DEFINIR FORMATO DE HORA 
-                var date = DateTime.ParseExact(citas.Fecha.Value.ToString("yyyy-MM-dd HH"), "yyyy-MM-dd HH", CultureInfo.InvariantCulture);
-                //AÑADIR MAS TIEMPO A LA ULTIMA HORA GUARDADA
-                date = date.AddHours(1);
-
-                //SI LA HORA SUPERA LAS 5 DE LA TARDE LA PASA AL SIGUIENTE DÍA
-                if (date.Hour >= 18 || (date.Hour < DateTime.Now.Hour && date == DateTime.Now))
-                {
-                    date = date.AddDays(1);
-                    //DEFINIR HORA INICIAL DE CITAS
-                    var time = new TimeSpan(08, 00, 00);
-                    //SETEAR FORMATO TOTAL DE FECHA Y HORA
-                    date = date.Date + time;
-                }
-                if (date.Hour <= 08)
-                {
-                    //DEFINIR HORA INICIAL DE CITAS
-                    var time = new TimeSpan(08, 00, 00);
-                    //SETEAR FORMATO TOTAL DE FECHA Y HORA
-                    date = date.Date + time;
-                }
-
-                //SI LA SIGUIENTE CITA ES UN DÍA FIN DE SEMANA LA PASA AL DÍA LUNES
-                if ((int)date.DayOfWeek == 6)
-                {
-                    date = date.AddDays(2);
-                }
-                if ((int)date.DayOfWeek == 0)
-                {
-                    date = date.AddDays(1);
-                }
-
-                //SEGUIDAMENTE AGENDA Y GUARDA LA INFORMACIÓN DE LA CITA EN LA BASE DE DATOS
-                var cita = new ProcesoCitum
-                {
-
-                    Id = userId,
-                    Identificador = Session.gestorId,
-                    Fecha = date
-
-                };
-                db.ProcesoCita.Add(cita);
-                db.SaveChanges();
-                Session.idCita = cita.IdCita;
-                this.ShowObj();
-            }
         }
 
         internal void ShowObj()
