@@ -30,8 +30,14 @@ namespace FinalProjectBDPOO.View
         {
             using (var db = new ProyectoFinalContext())
             {
-
-                if ((Int32.Parse(txtEdad.Text) > 60) || (Int32.Parse(cmbIntitucion.SelectedValue.ToString()) != 1) || (txtEnfermedad.Text != ""))
+                var validacion = db.Ciudadanos.Where(c => c.Dui == txtDUI.Text).ToList();
+                
+                if(validacion.Count > 0)
+                {
+                    MessageBox.Show("El ciudadano ya ha sido registrado anteriormente, por favor verificar DUI.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    this.Close();
+                }
+                else if ((Int32.Parse(txtEdad.Text) > 60) || (Int32.Parse(cmbIntitucion.SelectedValue.ToString()) != 1) || (txtEnfermedad.Text != "" && Int32.Parse(txtEdad.Text) > 18))
                 {
                     //ALMACENA LA INFORMACIÓN DEL CIUDADANO A SER VACUNADO
                     var ciudadano = new Ciudadano
@@ -99,8 +105,12 @@ namespace FinalProjectBDPOO.View
                     Session.idCita = cita.IdCita;
                     fmrVerificar frmVerificar = new fmrVerificar();
                     frmVerificar.ShowObj();
-                    
 
+
+                }
+                else
+                {
+                    MessageBox.Show("El ciudadano no cumple con las condiciones para ser acreedor a la vacuna.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }

@@ -60,7 +60,7 @@ namespace FinalProjectBDPOO.View
                     var headerTable = new Table(UnitValue.CreatePercentArray(columnHeaderWidths));
 
                     headerTable.AddCell("Gobierno de El Salvador");
-                    headerTable.AddCell("Proceso de Vacunación ");
+                    headerTable.AddCell("Proceso de Vacunación anti COVID19");
                     headerTable.AddCell("Fecha de Reporte");
                     headerTable.AddCell(DateTime.Now.Date.ToString("yyyy-MMMM-dd"));
 
