@@ -92,6 +92,9 @@ namespace FinalProjectBDPOO.View
                     doc.Add(table);
                     doc.Close();
 
+                    MessageBox.Show("Se a generado tu PDF en el Escritorio", "Notificacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+
                 }
 
             }
